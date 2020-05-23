@@ -10,30 +10,41 @@ package aula;
  * @author pedroermarinho
  */
 public class Aluno {
-    
-    private Integer matricula;
+   
+    private int matricula;
     private String nome;
-    private String rg;
-    private String cpf;
-    private String dataNascimento;
-
-    public Aluno(Integer matricula, String nome, String rg, String cpf, String dataNascimento) {
-        this.matricula = matricula;
-        this.nome = nome;
-        this.rg = rg;
-        this.cpf = cpf;
-        this.dataNascimento = dataNascimento;
-    }
+    private float nota1;
+    private float nota2;
+    private float nota3;
+    private float media;
 
     public Aluno() {
     }
 
+    public Aluno(int matricula, String nome, float nota1, float nota2, float nota3,float media) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+        this.media = media;
+    }
+
+    public float getMedia() {
+        return media;
+    }
+
+    public void setMedia(float media) {
+        this.media = media;
+    }
     
-    public Integer getMatricula() {
+    
+
+    public int getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(Integer matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 
@@ -45,29 +56,30 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public String getRg() {
-        return rg;
+    public float getNota1() {
+        return nota1;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setNota1(float nota1) {
+        this.nota1 = nota1;
     }
 
-    public String getCpf() {
-        return cpf;
+    public float getNota2() {
+        return nota2;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setNota2(float nota2) {
+        this.nota2 = nota2;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public float getNota3() {
+        return nota3;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setNota3(float nota3) {
+        this.nota3 = nota3;
     }
+    
     
     
 }
