@@ -22,7 +22,7 @@ public enum EstadoPagamento {
 		return this.descricao;
 	}
 	
-	public EstadoPagamento toEnum(Integer cod) {
+	public static EstadoPagamento toEnum(Integer cod) {
 		
 		if(cod == null) {
 			return null;
