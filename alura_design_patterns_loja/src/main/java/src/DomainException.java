@@ -1,6 +1,9 @@
-package src.orcamento.situacao;
+package src;
 
-public class DomainException extends Exception {
-    public DomainException(String s) {
+public class DomainException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
+    public DomainException(String mensagem){
+        super(mensagem);
     }
 }
