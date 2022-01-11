@@ -13,6 +13,7 @@ public class TestesImpostos {
         Orcamento orcamento = new Orcamento(new BigDecimal("100"),4);
         CalculadoraDeImposto calculadoraDeImposto = new CalculadoraDeImposto();
 
-        System.out.println(calculadoraDeImposto.calcular(orcamento, new ICMS()));
+        System.out.println(calculadoraDeImposto.calcular(orcamento, new ICMS(null)));
+        System.out.println(calculadoraDeImposto.calcular(orcamento, new ISS(null)));
     }
 }
