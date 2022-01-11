@@ -4,6 +4,7 @@ package src;
 import src.pedido.GeraPedido;
 import src.pedido.GeraPedidoHandler;
 import src.pedido.acao.EnviarEmailPedido;
+import src.pedido.acao.LogDePedido;
 import src.pedido.acao.SalvarPedidoNoBancoDeDados;
 
 import java.math.BigDecimal;
@@ -20,7 +21,8 @@ public class TestesPedidos {
         final GeraPedidoHandler handler = new GeraPedidoHandler(
                 Arrays.asList(
                         new SalvarPedidoNoBancoDeDados(),
-                        new EnviarEmailPedido()
+                        new EnviarEmailPedido(),
+                        new LogDePedido()
                 )
         );
         handler.execute(gerador);

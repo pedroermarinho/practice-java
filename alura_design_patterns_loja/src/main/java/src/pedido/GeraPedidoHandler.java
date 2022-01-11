@@ -21,7 +21,7 @@ public class GeraPedidoHandler {
 
         final Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(),orcamento);
 
-        acoes.forEach(acao-> acao.execute(dados));
+        acoes.forEach(acao-> acao.execute(pedido));
     }
 
 }

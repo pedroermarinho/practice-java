@@ -1,7 +1,0 @@
-
-Š
-java:S6206"oRefactor this class declaration to use 'record GeraPedido(String cliente, BigDecimal valorOrcamento, int ...)'.(èåâ’øÿÿÿÿ
-O
-java:S1128"4Remove this unused import 'src.orcamento.Orcamento'.(¾öÂžüÿÿÿÿ
-O
-java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ

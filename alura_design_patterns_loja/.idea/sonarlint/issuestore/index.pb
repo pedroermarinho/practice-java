@@ -1,16 +1,6 @@
 
-T
-$src/main/java/src/pedido/Pedido.java,2\3\23596c346779640cffd0f642387e3d456cfe36be
 W
 'src/main/java/src/http/HttpAdapter.java,6\7\67f5b3b788e5e81a699da6a41fbeb72458e7fbc3
-d
-4src/main/java/src/pedido/acao/EnviarEmailPedido.java,a\0\a0098131f7ee47a0f72123b58cd02d11fe9b0778
-m
-=src/main/java/src/pedido/acao/SalvarPedidoNoBancoDeDados.java,a\b\abe63bb2f0b2eb5df3cc97e3bf4996add6b61493
-X
-(src/main/java/src/pedido/GeraPedido.java,0\4\0410707c34faf131e3d09aa704790cf919a2de84
-f
-6src/main/java/src/pedido/acao/AcaoAposGerarPedido.java,e\5\e598c1444be6a3645fd0e9f653bdcb853ef725ac
 Z
 *src/main/java/src/http/JavaHttpClient.java,c\b\cb77146b95408acf2704ac260910851a9e0bc42a
 c
