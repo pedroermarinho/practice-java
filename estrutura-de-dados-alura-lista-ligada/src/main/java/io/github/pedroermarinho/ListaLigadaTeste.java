@@ -24,7 +24,30 @@ public class ListaLigadaTeste
 
         lista.adicionar("Macelo");
         System.out.println(lista);
-        
-    
+
+        lista.adicionar(2,"Gabriel");
+        System.out.println(lista);
+
+        Object x = lista.pegar(2);
+        System.out.println(x);
+
+        System.out.println(lista.tamanho());
+
+        lista.removeDoComeco();
+        System.out.println(lista);
+
+        lista.removeDoFim();
+        System.out.println(lista);
+
+        lista.adicionar("Jose");
+        lista.adicionar("Joao");
+        System.out.println(lista);
+
+        lista.remove(2);
+        System.out.println(lista);
+
+        System.out.println(lista.contem("Joao"));
+        System.out.println(lista.contem("maria"));
+
     }
 }

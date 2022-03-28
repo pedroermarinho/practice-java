@@ -2,12 +2,17 @@ package io.github.pedroermarinho;
 
 public class Celula {
 
-    private Object elemento;
+    private final Object elemento;
     private Celula proximo;
+    private Celula anterior;
 
     public Celula(Object elemento, Celula proximo) {
         this.elemento = elemento;
         this.proximo = proximo;
+    }
+
+    public Celula(Object elemento) {
+        this.elemento = elemento;
     }
 
     public Object getElemento() {
@@ -20,6 +25,14 @@ public class Celula {
 
     public void setProximo(Celula proximo) {
         this.proximo = proximo;
+    }
+
+    public Celula getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(Celula anterior) {
+        this.anterior = anterior;
     }
 
     @Override
@@ -40,17 +53,14 @@ public class Celula {
             return false;
         Celula other = (Celula) obj;
         if (elemento == null) {
-            if (other.elemento != null)
-                return false;
-        } else if (!elemento.equals(other.elemento))
-            return false;
-        return true;
+            return other.elemento == null;
+        } else return elemento.equals(other.elemento);
     }
 
     @Override
     public String toString() {
-        return  elemento + "->" + proximo;
+        return anterior + "<-((" + elemento + "))->" + proximo;
     }
 
-    
+
 }
