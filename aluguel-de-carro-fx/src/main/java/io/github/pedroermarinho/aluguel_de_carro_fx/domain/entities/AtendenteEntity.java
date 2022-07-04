@@ -1,6 +1,7 @@
 package io.github.pedroermarinho.aluguel_de_carro_fx.domain.entities;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.List;
 public class AtendenteEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -26,4 +27,14 @@ public class AtendenteEntity {
     @OneToMany(mappedBy = "atendente")
     private List<AluguelEntity> alugueis = new ArrayList<>();
 
+
+    public AtendenteEntity(String nome, String login, String senha) {
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
+    }
+
+    public AtendenteEntity() {
+
+    }
 }

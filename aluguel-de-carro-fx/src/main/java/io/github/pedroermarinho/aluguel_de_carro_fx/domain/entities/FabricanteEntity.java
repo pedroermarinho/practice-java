@@ -11,7 +11,7 @@ import java.util.List;
 public class FabricanteEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -22,4 +22,12 @@ public class FabricanteEntity {
 
     @OneToMany(mappedBy = "fabricante")
     private List<ModeloEntity> modeloEntities = new ArrayList<>();
+
+    public FabricanteEntity(String cnpj, String nome) {
+        this.cnpj = cnpj;
+        this.nome = nome;
+    }
+
+    public FabricanteEntity() {
+    }
 }

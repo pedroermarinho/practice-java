@@ -9,10 +9,6 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 
-/**
- * @author <a href="mailto:rene.gielen@gmail.com">Rene Gielen</a>
- * @noinspection RedundantThrows
- */
 public class SpringbootJavaFxApplication extends Application {
 
     private ConfigurableApplicationContext context;

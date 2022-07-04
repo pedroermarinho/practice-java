@@ -1,7 +1,6 @@
 package io.github.pedroermarinho.aluguel_de_carro_fx;
 
 import io.github.pedroermarinho.aluguel_de_carro_fx.application.SpringbootJavaFxApplication;
-import io.github.pedroermarinho.aluguel_de_carro_fx.controller.DialogController;
 import javafx.application.Application;
 import javafx.scene.Node;
 import net.rgielen.fxweaver.core.FxControllerAndView;
@@ -27,12 +26,7 @@ public class AluguelDeCarroFxApplication {
         return new SpringFxWeaver(applicationContext);
     }
 
-    /**
-     * See {@link DialogController#DialogController(FxControllerAndView)}
-     * for an example usage.
-     * <p/>
-     * <strong>MUST be in scope prototype!</strong>
-     */
+
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public <C, V extends Node> FxControllerAndView<C, V> controllerAndView(FxWeaver fxWeaver,

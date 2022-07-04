@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class EnderecoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -18,4 +18,12 @@ public class EnderecoEntity {
 
     @ManyToOne
     private BairroEntity bairro;
+
+    public EnderecoEntity( BairroEntity bairro) {
+        this.cliente = null;
+        this.bairro = bairro;
+    }
+
+    public EnderecoEntity() {
+    }
 }

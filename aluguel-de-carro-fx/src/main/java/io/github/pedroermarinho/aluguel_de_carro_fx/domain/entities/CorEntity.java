@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class CorEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -19,4 +19,11 @@ public class CorEntity {
 
     @OneToMany(mappedBy = "cor")
     private List<CarroEntity> carros = new ArrayList<>();
+
+    public CorEntity(String nome) {
+        this.nome = nome;
+    }
+
+    public CorEntity() {
+    }
 }

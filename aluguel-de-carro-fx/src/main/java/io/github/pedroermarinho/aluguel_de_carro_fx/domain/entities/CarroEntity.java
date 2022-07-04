@@ -10,7 +10,7 @@ import java.util.List;
 public class CarroEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -23,4 +23,11 @@ public class CarroEntity {
     @OneToMany(mappedBy = "carro")
     private List<AluguelEntity> alugueis;
 
+    public CarroEntity(CorEntity cor, ModeloEntity modelo) {
+        this.cor = cor;
+        this.modelo = modelo;
+    }
+
+    public CarroEntity() {
+    }
 }

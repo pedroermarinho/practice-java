@@ -12,7 +12,7 @@ import java.util.List;
 public class BairroEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -23,4 +23,12 @@ public class BairroEntity {
 
     @OneToMany(mappedBy = "bairro")
     private List<EnderecoEntity> enderecoEntities = new ArrayList<>();
+
+    public BairroEntity(String nome, ZonaEntity zona) {
+        this.nome = nome;
+        this.zona = zona;
+    }
+
+    public BairroEntity() {
+    }
 }

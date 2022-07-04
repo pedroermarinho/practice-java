@@ -11,7 +11,7 @@ import java.util.List;
 public class ZonaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -19,4 +19,11 @@ public class ZonaEntity {
 
     @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL)
     private List<BairroEntity> bairroEntities = new ArrayList<>();
+
+    public ZonaEntity(String nome) {
+        this.nome = nome;
+    }
+
+    public ZonaEntity() {
+    }
 }
