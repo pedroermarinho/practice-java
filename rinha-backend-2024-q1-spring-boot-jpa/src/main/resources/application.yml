@@ -1,0 +1,28 @@
+server:
+  port: ${PORT}
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  threads:
+    virtual:
+      enabled: true
+  jackson.deserialization.ACCEPT_FLOAT_AS_INT: false
+  datasource:
+    url: jdbc:postgresql://${DB_HOSTNAME}:5432/rinha
+    username: admin
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  liquibase:
+    change-log: db/changelog/init.sql
+    drop-first: true
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /docs

@@ -1,0 +1,12 @@
+
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://reactve-flascards:reactve-flascards@localhost:27017/reactve-flascards?authSource=admin
+
+springdoc:
+  api-docs:
+    path: /api/docs

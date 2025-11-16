@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: ejpa_ecommerce
+    ports:
+      - "3306:3306"
