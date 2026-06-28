@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated   # liga publisher confirms
+    publisher-returns: true              # liga returns (mensagem não roteável volta)
+    listener:
+      simple:
+        acknowledge-mode: auto           # container faz ack/nack
+        prefetch: 10                     # QoS por consumer
+        default-requeue-rejected: false  # exceção => não requeue (vai para DLX)
+        retry:
+          enabled: false                 # vamos controlar retry manualmente via DLX

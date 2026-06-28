@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "3acfed72-60b3-4182-a573-8bb6163a92f4",
+		"name": "florinda-eats-notas-fiscais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2489523"
+	},
+	"item": [
+		{
+			"name": "detalha nota fiscal pedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/nota-fiscal/pedido/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"nota-fiscal",
+						"pedido",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
